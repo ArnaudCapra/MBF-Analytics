@@ -141,7 +141,8 @@ If resultat Like "*" & "504 Gateway Timeout*" & "*" Then status = "DÈlai d'atte
 If resultat Like "*" & "You have reached your subscription limit*" & "*" Then status = "Limite de souscription RapidAPI atteinte"
 If resultat Like "*" & "API key missing*" & "*" Then status = "ClÈ API manquante ou non transmise"
 
-
+' By Alexandre Castagna, Louis Simon De Grimaudet De Rochebouët, Arnaud Capra
+  If resultat Like "*" & "code: 10001" & "*" Then status = "Ticker invalide"
 
 
     If status <> "ok" Then
@@ -2511,6 +2512,7 @@ End Sub
 'GMT-10' 'Honolulu'
 'GMT-11' 'NiuÈ'
 'GMT-12' 'Baker Island'"
+
 
 
 
